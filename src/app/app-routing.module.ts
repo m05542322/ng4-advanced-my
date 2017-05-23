@@ -14,14 +14,11 @@ const routes: Routes = [
 
 
 // 使用hash(#)可以使得舊版的瀏覽器可以直接用angular2的routing機制
-// @NgModule({
-//   imports: [RouterModule.forRoot(routes, {
-//     useHash: true
-//   })],
-//   exports: [RouterModule]
-// })
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    useHash: false,
+    enableTracing: true
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
